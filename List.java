@@ -31,9 +31,8 @@ public class List {
     }
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
-    public void addFirst(char chr, int count) {
+    public void addFirst(char chr) {
         CharData cd = new CharData(chr);
-        cd.count = count;
         Node newNode = new Node(cd, first);
         first = newNode;
         size++;
@@ -85,7 +84,7 @@ public class List {
             get(index).count++;
         } 
         else {
-            addFirst(chr,1);
+            addFirst(chr);
         }
     }
 
